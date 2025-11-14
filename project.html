@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/projects.css">
+
+</head>
+
+
+<body>
+<noscript>
+    <h1>Woops, JavaScript is not enabled. Please enable it to view this website!</h1>
+</noscript>
+<header>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">
+    <span class="bar"></span>
+</label>
+<nav role="navigation" aria-label="Main navigation" id="main-nav">
+        <a href="index.html" class="nav-link nav-light">Home</a>
+        <a href="index.html#dark" class="nav-link nav-dark">Home</a>
+        <a href="aboutme.html" class="nav-link nav-light">About me</a>
+        <a href="aboutme.html#dark" class="nav-link nav-dark">About me</a>
+        <a href="project.html" class="nav-link nav-light" aria-current="page">Project</a>
+        <a href="project.html#dark" class="nav-link nav-dark" aria-current="page">Project</a>
+        <a href="workexperience.html" class="nav-link nav-light">Work Experience</a>
+        <a href="workexperience.html#dark" class="nav-link nav-dark">Work Experience</a>
+        <a href="contactme.html" class="nav-link nav-light">Contact me</a>
+        <a href="contactme.html#dark" class="nav-link nav-dark">Contact me</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Free Cookie</a>
+        <a href="#dark" class="toggle-link">Dark mode</a>
+        <a href="project.html" class="toggle-link">Light mode</a>
+        <span id="dark"></span>
+</nav>
+
+</header>
+
+<main>
+    <h1>Project</h1>
+
+    <project-highlight role="region" aria-label="Project: Valhalla Bot" tabindex="0">
+        <h2>Valhalla Bot</h2>
+        <h3>September 2024 - Present</h3>
+            <p>A passion project of mine that I have been working on for over a year now. Valhalla bot is a Discord bot for a FC Mobile game community. That I'm a part of called Valhalla. The bot is built using Python and the Discord library. 
+            It has all the features that premium bots have but more personalized for our community. Most of the data is stored in a MongoDB database! </p>
+
+            <picture>
+              <source srcset="img/projects/valhalla-fc-640.webp 640w,
+                              img/projects/valhalla-fc-978.webp 978w"
+                      type="image/webp">
+              <img style="max-width: 25%;" src="img/projects/valhalla-fc-978.webp" alt="Valhalla Bot Screenshot" />
+            </picture>
+
+            <ul class="tools" aria-label="Tools used">
+                <li class="tool" title="Python">Py</li>
+                <li class="tool" title="Discord.py">D.py</li>
+                <li class="tool" title="MongoDB">MDB</li>
+            </ul>
+    </project-highlight>
+
+
+    <h2 style="text-align: center; margin-top: 5rem;">Other Projects</h2>
+    <p style="text-align: center;">Here are some of the other projects I've worked on. <strong>Click on the cards</strong> to learn more about them!</strong></p>
+
+    <projects-section>
+        <input type="checkbox" id="card1" class="card-toggle">
+        <label for="card1">
+            <project-card>
+                <h3>Leafybucks <br>
+                <span style="font-size: 1rem; font-weight: normal; ">July 2025 - Present</span>
+                </h3>
+                <p>I need to be better at managing my money, so I thought why not build a nice little web app for this that can track my expenses and see how much I'm spending on doordash each month.</p>
+                <picture>
+              <source srcset="img/projects/leafybucks-640.webp 640w,
+                              img/projects/leafybucks-1280.webp 1280w,
+                              img/projects/leafybucks-1535.webp 1535w"
+                      type="image/webp">
+              <img src="img/projects/leafybucks-1535.webp" alt="Leafybucks screenshot" />
+                </picture>
+                <project-details>
+                    <p><strong>Status:</strong> In Development</p>
+                    <p><strong>Features:</strong> Expense tracking, budget management, category analysis, and spending trends visualization.</p>
+                    <ul class="tools" aria-label="Tools used">
+                        <li class="tool" title="Google Cloud">GCloud</li>
+                        <li class="tool" title="React">React</li>            
+                    </ul>
+                </project-details>
+            </project-card>
+        </label>
+
+        <input type="checkbox" id="card2" class="card-toggle">
+        <label for="card2">
+            <project-card>
+                <h3>Study Genius <br>
+                <span style="font-size: 1rem; font-weight: normal; ">April 2025</span>
+                </h3>
+                <p>My very first hackaton project. 24 hours to build a web application to help you study for youe exams faster and more efficiently.</p>
+                <iframe src="https://www.youtube.com/embed/xdCblU1HOhE" title="Study Genius" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+            <project-details>
+                <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Features:</strong> ChatGPT powered flashcard generation. Backed by firestore database.</p>
+                    <ul class="tools" aria-label="Tools used">
+                        <li class="tool" title="React">React</li>
+                        <li class="tool" title="Firestore">Firestore</li>
+                        <li class="tool" title="ChatGPT">ChatGPT</li>
+                    </ul>
+                </project-details>
+            </project-card>
+        </label>
+
+        <input type="checkbox" id="card3" class="card-toggle">
+        <label for="card3">
+            <project-card>
+                <h3>FÚTBOL DEX <br>
+                <span style="font-size: 1rem; font-weight: normal; ">August 2025 - Present</span>
+                </h3>
+                <p>A discord bot that my friend used started to get boreding so they asked me if I could make a better one. Challenged accepted.</p>
+                <picture>
+                  <source srcset="img/projects/futdex-640.webp 640w,
+                                  img/projects/futdex-1080.webp 1080w"
+                          type="image/webp">
+                  <img src="img/projects/futdex.jpg" alt="Futbol Dex Screenshot" />
+                </picture>
+                <project-details>
+                    <p><strong>Status:</strong> Beta Testing Phase</p>
+                    <p><strong>Features:</strong> Gcloud was used as the main framework for the bot. However we also used Django as the framework for the website. I created custom API endpoints that will allow the desingers to upload the cards from the website and the discord bot itself can call these API reandomly to spawn the card.</p>
+                    <ul class="tools" aria-label="Tools used">
+                        <li class="tool" title="Django">Django</li>
+                        <li class="tool" title="API Endpoints">API</li>
+                        <li class="tool" title="Gcloud">Gcloud</li>
+                    </ul>
+                </project-details>
+            </project-card>
+        </label>
+
+        <input type="checkbox" id="card4" class="card-toggle">
+        <label for="card4">
+            <project-card>
+                <h3>Valhalla World Cup Spinner <br>
+                <span style="font-size: 1rem; font-weight: normal; ">January 2025</span>
+                </h3>
+                <p>Had time one night to make something fun for a community event for Valhlla FC and vibe coded a quick little spinner for the event.</p>
+                <picture>
+                  <source srcset="img/projects/flag-spinner-fixed-640.gif 640w"
+                          type="image/gif">
+                  <img src="img/projects/flag_spinner.gif" alt="Valhalla World Cup Spinner" />
+                </picture>
+                <project-details>
+                    <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Features:</strong>Frontend was made using React and the backend was made using Python. The spinner is connected to a little database that stores infomation about all the players that signed up for the event. It then displays their discord icon and picks a random country to give the player. Result is then saved to a file!</p>
+                    <ul class="tools" aria-label="Tools used">
+                        <li class="tool" title="React">React</li>
+                        <li class="tool" title="Python">Python</li>
+                        <li class="tool" title="Discord">Discord</li>
+                    </ul>
+                </project-details>
+            </project-card>
+        </label>
+
+        <input type="checkbox" id="card5" class="card-toggle">
+        <label for="card5">
+            <project-card>
+                <h3>Birthday Countdown <br>
+                <span style="font-size: 1rem; font-weight: normal; ">October 2024</span>
+
+                </h3>
+                <p>Girlfriend brithday and I was a little broke back then, so I deicded to use my degree to code a little something for her that would countdown to her birthday and would reval a secert video after!.</p>
+                <picture>
+                  <source srcset="img/projects/bb-birthday-fixed-640.gif 640w"
+                          type="image/gif">
+                  <img src="img/projects/bb birthday.gif" alt="Birthday Countdown" />
+                </picture>
+                <project-details>
+                    <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Features:</strong> My first really project I made with React. It's a simple countdown timer that updates every second and shows a secret video after the countdown reaches 0. It also a music player as well!</p>
+                    <ul class="tools" aria-label="Tools used">
+                        <li class="tool" title="React">React</li>
+                        <li class="tool" title="HTML">HTML</li>
+                        <li class="tool" title="CSS">CSS</li>
+                        <li class="tool" title="JavaScript">JavaScript</li>
+                    </ul>
+                </project-details>
+            </project-card>
+        </label>
+
+        <input type="checkbox" id="card6" class="card-toggle">
+        <label for="card6">
+            <project-card>
+                <h3>Permier League Match Predictor <br>
+                <span style="font-size: 1rem; font-weight: normal; ">October 2025 - Present</span>
+                </h3>
+                <p>I'm a massive football fan(I dont't care thats the name of the game) and I thought it would be fun to try and predict the outcomes of the matches for the Premier League. I'm using a simple machine learning model to predict the outcomes of the matches.</p>
+                <picture>
+                  <source srcset="img/projects/premier-league-640.webp 640w,
+                                  img/projects/premier-league-900.webp 900w"
+                          type="image/webp">
+                  <img src="img/projects/premier league.jpg" alt="Premier League Match Predictor" />
+                </picture>
+                <project-details>
+                    <p><strong>Status:</strong> Planning Phase</p>
+                    <p><strong>Features:</strong> Gives you an prediction of the outcome of the match based on the team's recent form and if they have any injuries or suspensions.</p>
+                    <ul class="tools" aria-label="Tools used">
+                        <li class="tool" title="Python">Python</li>
+                        <li class="tool" title="Pytouch">Pytouch</li>
+                    </ul>
+                </project-details>
+            </project-card>
+        </label>
+    </projects-section>
+
+</main>
+<footer>
+    <em>This page was made by <span>&hearts;</span> Mark Ruangrattham</em>
+</footer>
+</body>
+</html>
+

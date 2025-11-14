@@ -1,0 +1,82 @@
+@import url('style.css');
+
+.contact-form  {
+    font-family: var(--hello-world-font, Arial, sans-serif);
+    font-size: 1rem;
+}
+
+.contact-form fieldset {
+  border-radius: 0.625rem;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--muted);
+  margin: auto;
+  max-width: 600px; 
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  
+}
+
+
+.contact-form label:has(+ input:required)::after,
+.contact-form label:has(+ textarea:required)::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--hello-world-font, Arial, sans-serif);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--muted);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form input{
+    max-width: 300px;
+}
+
+.contact-form input:required,
+.contact-form textarea:required {
+  border-color: var(--error);
+}
+
+.contact-form button[type="submit"] {
+  font-family: var(--hello-world-font, Arial, sans-serif);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--muted);
+  background-color: gold;
+  color: var(--text);
+}
+
+.output-container output.errors {
+  display: block;
+  color: red;
+  font-weight: bold;
+  max-width: 600px;
+  margin-top: 1rem;
+  margin: auto;
+}
+
+.output-container output.info {
+  display: block;
+  color: green;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  max-width: 600px;
+  margin: auto;
+}
