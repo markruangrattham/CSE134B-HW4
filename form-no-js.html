@@ -26,18 +26,22 @@
         <form action="https://httpbin.org/post" method="POST" class="contact-form" target="_blank">
             <fieldset>
                 <legend>No JavaScript Form</legend>
-                <input type="hidden" name="possible_bot" value="true"/>
+                <input type="hidden" name="possible_bot" title="Possible Bot" value="true"/>
                 <label for="name">Name</label>
-                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="text" id="name" name="name" placeholder="Enter your name" title="Enter your name has to have a minimum of 2 characters and only letters, make sure to capitalize your first and last name" required minlength="2" maxlength="100"  pattern="^[A-Z][a-z]+ [A-Z][a-z]+$" aria-required="true" aria-describedby="name-error">
+                <div class="error-message" id="name-error">Why do you have a number in your name???? enter your last name as well and capitalize it</div>
                 <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required minlength="5" maxlength="100" aria-required="true" aria-describedby="email-error"  title="Enter your email has to have a minimum of 5 characters and only letters, numbers, and symbols" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                <div class="error-message" id="email-error">I think you forgot to add the @ symbol or . whatever it is</div>
                 <label for="comment">Comment</label>
-                <textarea name="comment" placeholder="Enter your comment" required></textarea>
+                <textarea id="comment" name="comment"  title="Enter your comment has to have a minimum of 10 characters and only letters, numbers, and symbols" placeholder="Enter your comment"
+                minlength="10" maxlength="10000" aria-describedby="comment-error" pattern="^[a-zA-Z0-9\s\-']+$" optional></textarea>
+                <div class="error-message" id="comment-error">either youe comment is too short or too long or you have a charchter I dont know </div>
                 <button type="submit">Submit</button>
               
             </fieldset>
             <div class="output-container">
-                <output class="errors">Place holder for errors</output><br>
+                <output class="errors" id="errors">Place holder for errors</output><br>
                 <output class="info">Place holder for info</output>
             </div>
 
@@ -47,4 +51,3 @@
     </main>
 </body>
 </html>
-
