@@ -133,14 +133,14 @@ timeline-grid {
         }
 
         .exp-toggle:checked ~ .timeline-circle + .timeline-box-label > timeline-box {
-            background-color: light-dark(#e9f2ff, #1a2332);
+            background-color: var(--surface-highlight);
             border-color: var(--accent);
 
             experience-details {
                 max-height: min(clamp(20rem, 40vw, 30rem), 80dvh);
                 opacity: 1;
                 margin-top: clamp(0.5rem, 1.5vw, 1rem);
-                background-color: light-dark(#ffffff, #121826);
+                background-color: var(--surface-detail);
                 border: clamp(1px, 0.2vw, 2px) solid var(--accent);
                 border-radius: clamp(4px, 0.5vw, 6px);
                 padding: clamp(0.5rem, 1.5vw, 1rem);

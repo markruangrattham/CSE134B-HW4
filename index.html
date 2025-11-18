@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="js/theme-init.js"></script>
 <link rel="stylesheet" href="style/index.css">
 </head>
 
@@ -14,6 +15,7 @@
 <body>
 <noscript>
     <h1>Woops, Java Script is not enabled. Please enable it to view this website!</h1>
+    <p>The theme toggle needs JavaScript, so you'll see the default light theme.</p>
 </noscript>
 
 
@@ -25,22 +27,14 @@
     </label>
 
     <nav id="main-nav">
-        <a href="index.html" class="nav-link nav-light" aria-current="page">Home</a>
-        <a href="index.html#dark" class="nav-link nav-dark" aria-current="page">Home</a>
-        <a href="aboutme.html" class="nav-link nav-light">About me</a>
-        <a href="aboutme.html#dark" class="nav-link nav-dark">About me</a>
-        <a href="project.html" class="nav-link nav-light">Project</a>
-        <a href="project.html#dark" class="nav-link nav-dark">Project</a>
-        <a href="workexperience.html" class="nav-link nav-light">Work Experience</a>
-        <a href="workexperience.html#dark" class="nav-link nav-dark">Work Experience</a>
-        <a href="contactme.html" class="nav-link nav-light">Contact me</a>
-        <a href="contactme.html#dark" class="nav-link nav-dark">Contact me</a>
+        <a href="index.html" class="nav-link" aria-current="page">Home</a>
+        <a href="aboutme.html" class="nav-link ">About me</a>
+        <a href="project.html" class="nav-link ">Project</a>
+        <a href="workexperience.html" class="nav-link ">Work Experience</a>
+        <a href="contactme.html" class="nav-link ">Contact me</a>
+        <a href="form-with-js.html" class="nav-link">Form with JavaScript</a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Free Cookie</a>
-        <a href="#dark" class="toggle-link">Dark mode</a>
-        <a href="index.html" class="toggle-link">Light mode</a>
-        <a href="form-with-js.html" class="nav-link nav-light">Form with JavaScript</a>
-        <a href="form-with-js.html#dark" class="nav-link nav-dark">Form with JavaScript</a>
-        <span id="dark"></span>
+        <button id="theme-toggle" class="toggle-link" type="button" aria-live="polite" aria-label="Toggle between light and dark theme"></button>
     </nav>
 
 
@@ -90,5 +84,6 @@
     <em>This page was made by <span>&hearts;</span> Mark Ruangrattham</em>
 
 </footer>
+<script src="js/lightdark.js" defer></script>
 </body>
 </html>

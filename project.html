@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="js/theme-init.js"></script>
     <link rel="stylesheet" href="style/projects.css">
 
 </head>
 
 
-<body>
+<body class="project-view">
 <noscript>
     <h1>Woops, JavaScript is not enabled. Please enable it to view this website!</h1>
+    <p>The theme toggle needs JavaScript, so you'll see the default light theme.</p>
 </noscript>
 <header>
 <input type="checkbox" id="nav-toggle" class="nav-toggle">
@@ -22,20 +24,14 @@
     <span class="bar"></span>
 </label>
 <nav role="navigation" aria-label="Main navigation" id="main-nav">
-        <a href="index.html" class="nav-link nav-light">Home</a>
-        <a href="index.html#dark" class="nav-link nav-dark">Home</a>
-        <a href="aboutme.html" class="nav-link nav-light">About me</a>
-        <a href="aboutme.html#dark" class="nav-link nav-dark">About me</a>
-        <a href="project.html" class="nav-link nav-light" aria-current="page">Project</a>
-        <a href="project.html#dark" class="nav-link nav-dark" aria-current="page">Project</a>
-        <a href="workexperience.html" class="nav-link nav-light">Work Experience</a>
-        <a href="workexperience.html#dark" class="nav-link nav-dark">Work Experience</a>
-        <a href="contactme.html" class="nav-link nav-light">Contact me</a>
-        <a href="contactme.html#dark" class="nav-link nav-dark">Contact me</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutme.html" class="nav-link">About me</a>
+        <a href="project.html" class="nav-link" aria-current="page">Project</a>
+        <a href="workexperience.html" class="nav-link">Work Experience</a>
+        <a href="contactme.html" class="nav-link">Contact me</a>
+        <a href="form-with-js.html" class="nav-link">Form with JavaScript</a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Free Cookie</a>
-        <a href="#dark" class="toggle-link">Dark mode</a>
-        <a href="project.html" class="toggle-link">Light mode</a>
-        <span id="dark"></span>
+        <button id="theme-toggle" class="toggle-link" type="button" aria-live="polite" aria-label="Toggle between light and dark theme"></button>
 </nav>
 
 </header>
@@ -67,9 +63,9 @@
     <h2 style="text-align: center; margin-top: 5rem;">Other Projects</h2>
     <p style="text-align: center;">Here are some of the other projects I've worked on. <strong>Click on the cards</strong> to learn more about them!</strong></p>
 
-    <projects-section>
+<projects-section>
         <input type="checkbox" id="card1" class="card-toggle">
-        <label for="card1">
+        <label for="card1" data-card>
             <project-card>
                 <h3>Leafybucks <br>
                 <span style="font-size: 1rem; font-weight: normal; ">July 2025 - Present</span>
@@ -94,7 +90,7 @@
         </label>
 
         <input type="checkbox" id="card2" class="card-toggle">
-        <label for="card2">
+        <label for="card2" data-card>
             <project-card>
                 <h3>Study Genius <br>
                 <span style="font-size: 1rem; font-weight: normal; ">April 2025</span>
@@ -114,7 +110,7 @@
         </label>
 
         <input type="checkbox" id="card3" class="card-toggle">
-        <label for="card3">
+        <label for="card3" data-card>
             <project-card>
                 <h3>FÚTBOL DEX <br>
                 <span style="font-size: 1rem; font-weight: normal; ">August 2025 - Present</span>
@@ -139,7 +135,7 @@
         </label>
 
         <input type="checkbox" id="card4" class="card-toggle">
-        <label for="card4">
+        <label for="card4" data-card>
             <project-card>
                 <h3>Valhalla World Cup Spinner <br>
                 <span style="font-size: 1rem; font-weight: normal; ">January 2025</span>
@@ -163,7 +159,7 @@
         </label>
 
         <input type="checkbox" id="card5" class="card-toggle">
-        <label for="card5">
+        <label for="card5" data-card>
             <project-card>
                 <h3>Birthday Countdown <br>
                 <span style="font-size: 1rem; font-weight: normal; ">October 2024</span>
@@ -189,7 +185,7 @@
         </label>
 
         <input type="checkbox" id="card6" class="card-toggle">
-        <label for="card6">
+        <label for="card6" data-card>
             <project-card>
                 <h3>Permier League Match Predictor <br>
                 <span style="font-size: 1rem; font-weight: normal; ">October 2025 - Present</span>
@@ -217,6 +213,8 @@
 <footer>
     <em>This page was made by <span>&hearts;</span> Mark Ruangrattham</em>
 </footer>
+<script src="js/lightdark.js" defer></script>
+<script src="js/project-transitions.js" defer></script>
 </body>
 </html>
 

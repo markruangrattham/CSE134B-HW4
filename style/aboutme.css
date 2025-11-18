@@ -5,7 +5,7 @@ about-me {
     padding: 20px;
     margin: 20px;
     font-family: var(--hello-world-font, Arial, sans-serif);
-    background: linear-gradient(180deg, light-dark(#ffffff, #1a1f2e) 0%, light-dark(#f7f7f7, #121826) 100%);
+    background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
     border-left: 6px solid var(--primary-box-color);
     border-radius: 12px;
 }
@@ -42,7 +42,7 @@ about-me picture img {
 
         &[open] {
             > summary {
-                background: light-dark(#ffffff, #1a1f2e);
+                background: var(--surface-detail);
                 border-bottom: 1px solid var(--muted);
 
                 &::after {

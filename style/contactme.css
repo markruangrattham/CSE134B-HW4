@@ -28,7 +28,7 @@
         &:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 0.1875rem light-dark(rgba(11, 91, 211, 0.15), rgba(138, 180, 248, 0.15));
+            box-shadow: 0 0 0 0.1875rem var(--focus-ring);
         }
 
         &::placeholder {
@@ -40,7 +40,7 @@
         margin-top: 0.75rem;
         padding: 0.625rem 0.875rem;
         background: var(--accent);
-        color: light-dark(#ffffff, #0b0f19);
+        color: var(--button-text);
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;
@@ -48,7 +48,7 @@
         transition: background-color 0.2s ease, transform 0.1s ease;
 
         &:hover {
-            background: light-dark(#0949a6, #9ec1f9);
+            background: var(--button-hover);
             transform: translateY(-1px);
         }
 
@@ -68,7 +68,7 @@
     img {
         width: 4rem;
         height: 4rem;
-        filter: drop-shadow(light-dark(0 0.25rem 0.375rem rgba(0,0,0,0.15), 0 0.25rem 0.375rem rgba(0,0,0,0.4)));
+        filter: drop-shadow(var(--image-drop-shadow));
         transition: transform 0.2s ease;
 
         &:hover {

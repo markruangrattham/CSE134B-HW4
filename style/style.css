@@ -1,29 +1,61 @@
 :root{
-    color-scheme: light dark;
+    color-scheme: light;
     --font-family: 'Inter', Arial, sans-serif;
-    --bg: light-dark(#ffffff, #0b0f19);
-    --fg: light-dark(#111111, #eaeefb);
-    --muted: light-dark(#6b7280, #9aa4b2);
-    --card: light-dark(#f5f5f7, #121826);
-    --accent: light-dark(#0b5bd3, #8ab4f8);
-    --primary-box-color: light-dark(#000000, #eaeefb);
-    --secondary-color: light-dark(#f4f4f4, #111111);
-    --box-shadow: light-dark(0 0.25rem 0.5rem rgba(0,0,0,0.1), 0 0.25rem 0.5rem rgba(0,0,0,0.3));
-    --nav-bg-start: light-dark(#f8f9fa, #1a1f2e);
-    --nav-bg-end: light-dark(#e9ecef, #0f1419);
-    --hamburger-bg: light-dark(rgba(255,255,255,0.9), rgba(26,31,46,0.9));
-    --hamburger-border: light-dark(rgba(0,0,0,0.15), rgba(234,238,251,0.15));
-    --hamburger-shadow: light-dark(0 4px 10px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.4));
+    --bg: #ffffff;
+    --fg: #111111;
+    --muted: #6b7280;
+    --card: #f5f5f7;
+    --accent: #0b5bd3;
+    --primary-box-color: #000000;
+    --secondary-color: #f4f4f4;
+    --box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    --nav-bg-start: #f8f9fa;
+    --nav-bg-end: #e9ecef;
+    --hamburger-bg: rgba(255,255,255,0.9);
+    --hamburger-border: rgba(0,0,0,0.15);
+    --hamburger-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    --hamburger-hover: rgba(255,255,255,1);
+    --toggle-border: rgba(0,0,0,0.15);
+    --toggle-hover: rgba(11,91,211,0.15);
+    --surface-highlight: #e9f2ff;
+    --surface-detail: #ffffff;
+    --focus-ring: rgba(11, 91, 211, 0.15);
+    --button-text: #ffffff;
+    --button-hover: #0949a6;
+    --image-drop-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.15);
+    --text: #111111;
+}
+
+[data-theme="dark"]{
+    color-scheme: dark;
+    --bg: #0b0f19;
+    --fg: #eaeefb;
+    --muted: #9aa4b2;
+    --card: #121826;
+    --accent: #8ab4f8;
+    --primary-box-color: #eaeefb;
+    --secondary-color: #111111;
+    --box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.3);
+    --nav-bg-start: #1a1f2e;
+    --nav-bg-end: #0f1419;
+    --hamburger-bg: rgba(26,31,46,0.9);
+    --hamburger-border: rgba(234,238,251,0.15);
+    --hamburger-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    --hamburger-hover: rgba(26,31,46,1);
+    --toggle-border: rgba(234,238,251,0.25);
+    --toggle-hover: rgba(138,180,248,0.2);
+    --surface-highlight: #1a2332;
+    --surface-detail: #121826;
+    --focus-ring: rgba(138, 180, 248, 0.2);
+    --button-text: #0b0f19;
+    --button-hover: #9ec1f9;
+    --image-drop-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.4);
+    --text: #eaeefb;
 }
 
 header{
     text-align: center;
 }
-
-html:not(:has(#dark:target)) { color-scheme: light; } 
-html:has(#dark:target)       { color-scheme: dark;  }
-
-#dark { position: absolute; top: 0; pointer-events: none; }
 
 .toggle-link {
     display: inline-flex;
@@ -31,40 +63,22 @@ html:has(#dark:target)       { color-scheme: dark;  }
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
     border-radius: 10px;
-    border: 1px solid var(--muted);
+    border: 1px solid var(--toggle-border);
     color: var(--fg);
     background: transparent;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    font-weight: 500;
+    font-family: var(--font-family, Arial, sans-serif);
 }
 
 .toggle-link:hover {
-    background: var(--card);
+    background: var(--toggle-hover);
 }
 
-html:has(#dark:target) .toggle-link[href="#dark"] {
-    display: none;
-}
-
-.toggle-link:not([href="#dark"]) {
-    display: none;
-}
-html:has(#dark:target) .toggle-link:not([href="#dark"]) {
-    display: inline-flex;
-}
-
-.toggle-link[href="#dark"]::before { content:"\26AB\FE0F"; }
-html:has(#dark:target) .toggle-link:not([href="#dark"])::before { content:"\26AA\FE0F"; }
-
-.nav-dark {
-    display: none;
-}
-html:has(#dark:target) .nav-dark {
-    display: inline-block;
-}
-html:has(#dark:target) .nav-light {
+.no-js #theme-toggle{
     display: none;
 }
 
@@ -132,6 +146,17 @@ nav a[aria-current="page"]{
         font-weight: 600;
     }
 }
+nav>button{
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: var(--fg);
+    font-weight: 500;
+    border-radius: 0.75rem;
+    transition: all 240ms ease;
+    position: relative;
+    overflow: hidden;
+    
+}
 
 @media (max-width: 560px){
     header{ position: relative; }
@@ -149,7 +174,7 @@ nav a[aria-current="page"]{
         transition: background 0.2s ease;
     }
     .hamburger:hover{ 
-        background: light-dark(rgba(255,255,255,1), rgba(26,31,46,1)); 
+        background: var(--hamburger-hover); 
     }
     nav{ 
         display:none; 

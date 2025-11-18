@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form with JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="js/theme-init.js"></script>
     <link rel="stylesheet" href="style/form-with-js.css">
 </head>
 
 <body>
+    <noscript>
+        <p>Woops, JavaScript is not enabled. The enhanced form validation and theme switcher need JavaScript, so you'll see the default light theme.</p>
+    </noscript>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="aboutme.html">About me</a>
-            <a href="project.html">Project</a>
-            <a href="workexperience.html">Work Experience</a>
-            <a href="contactme.html">Contact me</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">
+            <span class="bar"></span>
+        </label>
+        <nav id="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="aboutme.html" class="nav-link">About me</a>
+            <a href="project.html" class="nav-link">Project</a>
+            <a href="workexperience.html" class="nav-link">Work Experience</a>
+            <a href="contactme.html" class="nav-link">Contact me</a>
+            <a href="form-with-js.html" class="nav-link" aria-current="page">Form with JavaScript</a>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Free Cookie</a>
-            <a href="#dark" class="toggle-link">Dark mode</a>
-            <a href="form-no-js.html" class="toggle-link">Light mode</a>
-            <span id="dark"></span>
+            <button id="theme-toggle" class="toggle-link" type="button" aria-live="polite" aria-label="Toggle between light and dark theme"></button>
         </nav>
     </header>
     <main>
@@ -49,7 +59,8 @@
 
 
     </main>
-    <script src="scriptForForm.js"></script>
+    <script src="js/lightdark.js" defer></script>
+    <script src="js/scriptForForm.js"></script>
 </body>
 
 </html>
